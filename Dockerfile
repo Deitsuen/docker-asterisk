@@ -17,5 +17,3 @@ COPY extensions /etc/asterisk/extensions.conf
 COPY voicemail /etc/asterisk/voicemail.conf
 
 ENTRYPOINT 'gtkterm'
-
-RUN "chromium --no-sandbox"
