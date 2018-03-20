@@ -2,8 +2,7 @@ FROM debian:stretch
 ENV DISPLAY=:0
 
 # install asterisk as IPBX server, gtkterm for the router and chromium for configurate  the phone
-RUN useradd -m cacao \
-    && apt-get update && apt-get install -y asterisk-prompt-fr-armelle \
+RUN apt-get update && apt-get install -y asterisk-prompt-fr-armelle \
                                                              gtkterm \
                                                              chromium
 
