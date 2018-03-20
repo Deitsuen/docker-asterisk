@@ -1,0 +1,17 @@
+[local]
+
+exten => 100, 1, Dial(SIP/user1, 5)
+exten => 100, 2, VoiceMail(100)
+
+exten => 200, 1, Dial(SIP/user2, 5)
+exten => 200, 2, VoiceMail(200)
+
+exten => 300, 1, Dial(SIP/user3, 5)
+exten => 300, 2, VoiceMail(300)
+
+exten => 400, 1, Dial(SIP/user4, 5)
+exten => 400, 2, VoiceMail(400)
+
+exten => 666, 1, Dial(SIP/user1&SIP/user2&SIP/user3&SIP/user4, 5)
+
+exten => 999, 1, VoiceMailMain()
